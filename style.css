@@ -1,0 +1,176 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+body{
+    background-color: bisque;
+    height: 100vh;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10%;
+}
+
+.navbar img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.navbar ul{
+    display: flex;
+    gap: 30px;
+}
+
+.navbar ul li{
+    list-style: none;
+}
+
+.navbar ul li a{
+    font-size: 1.3rem;
+    color: rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    font-family: "poppins", arial;
+    transition: all 0.3s ease;
+}
+
+.navbar ul li a:hover{
+    color: rgba(0, 0, 0, 1);
+}
+
+.navbar .hamburger{
+    visibility: hidden;
+    opacity: 0.5;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    transition: all 0.3s ease;
+}
+
+.navbar .hamburger:hover{
+    opacity: 1;
+}
+
+
+.navbar .hamburger .line{
+    width: 100%;
+    height: 7px;
+    background-color: rgb(0, 0, 0);
+    transition: all 0.3s ease;
+}
+
+.navbar .hamburger:hover .line{
+    height: 5px;
+}
+
+.hero-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    padding: 0px 10%;
+}
+
+.hero-section .card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    gap: 40px;
+}
+
+.hero-section .card > img{
+    width: 500px;
+    height: 700px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.hero-section .card .desc{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 600px;
+}
+
+.hero-section .card .desc h1{
+    font-size: 3rem;
+    font-family: "sora";
+}
+
+.hero-section .card .desc p{
+    font-size: 1.2rem;
+    font-family: "poppins";
+    color: black;
+}
+
+.hero-section .card .desc > p:nth-child(1){
+    font-size: 1.1rem;
+    font-family: "poppins";
+    color: rgb(75, 124, 145);
+}
+
+.hero-section .card .desc a{
+    background-color: black;
+    width: fit-content;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.hero-section .card .desc a .btn{
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: white;
+    text-decoration: none;
+    font-family: "poppins";
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.hero-section .card .desc a .btn p{
+    color: white;
+}
+
+@media screen and (max-width: 1000px) {
+    .hero-section{
+        height: 100vh;
+    }
+
+    .hero-section .card{
+        flex-direction: column-reverse;
+        scale: 0.9;
+    }
+
+    .hero-section .card .desc{
+        text-align: center;
+    }
+
+    .hero-section .card .desc a{
+        align-self: center;
+    }
+
+    .navbar ul{
+        display: none;
+    }
+
+    .navbar .hamburger{
+        visibility: visible;
+    }
+}
+
+
